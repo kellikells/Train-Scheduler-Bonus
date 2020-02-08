@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Scheduler</title>
+
+  <!-- reset css -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- google fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Coda+Caption:800|Average+Sans|Black+Ops+One|Electrolize|Overpass+Mono|Rubik+Mono+One&display=swap"
+    rel="stylesheet">
+
+  <!-- jquery script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Link to Moment.js  -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <!-- Firebase Core JavaScript Link -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <!-- Specific Firebase products we want (Database) -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+  <!-------------MY LINKS------------->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+  <div class="container" id="myContainer">
+    <!-- <img src="assets/images/back-train.jpeg" alt="train image" width="100%"> -->
+
+    <!--====================================== -->
+    <!--==== HEADER : bootstrap jumbotron ==== -->
+    <!--====================================== -->
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron jumbotron-fluid" id="myJumbotron">
+          <div class="container">
+            <h1 class="display-4">Train Scheduler!</h1>
+            <p class="lead" id="myJumboCaption">This is REALTIME up-to-date (even by the minute) train data! And if you
+              don't want to
+              calculate the time until the next train (even though we give you the minutes), we take a MOMENT and do
+              that for you too. This site is so hot, it's like a FIREBASE !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--====================================== -->
+    <!--======= TRAIN INFO DISPLAYED  ======== -->
+    <!--====================================== -->
+    <div class="row">
+      <div class="col-9">
+        <table class="table" id="myTable">
+          <thead class="thead-light">
+            <!-- table header for the columns -->
+            <tr>
+              <th scope="col">Train Name</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Frequency (min)</th>
+              <th scope="col">Next Arrival Time</th>
+              <th scope="col">How Many Minutes Away</th>
+            </tr>
+          </thead>
+          <!-- each train is a <tr> and specific info is a <td> -->
+          <tbody id="logged-trains">
+            <!-- <tr>
+              <td></td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+
+      <!--====================================== -->
+      <!--========== FORM: ADD TRAIN  ========== -->
+      <!--====================================== -->
+
+      <div class="col-3">
+        <form id="myForm">
+          <div class="form-group">
+            <label for="train-name-input">Train Name:</label>
+            <input type="text" class="form-control" id="train-name-input" placeholder="Thomas">
+          </div>
+          <div class="form-group">
+            <label for="destination-input">Destination:</label>
+            <input type="text" class="form-control" id="destination-input" placeholder="Anywhere you 'CHOO-se">
+          </div>
+          <div class="form-group">
+            <label for="frequency-input">Frequency (min):</label>
+            <input type="text" class="form-control" id="frequency-input" placeholder="30 min">
+          </div>
+          <div class="form-group">
+            <label for="first-train-input">First Train Time (HH mm):</label>
+            <input type="text" class="form-control" id="first-train-input" placeholder="5:00 pm">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- my javascript -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

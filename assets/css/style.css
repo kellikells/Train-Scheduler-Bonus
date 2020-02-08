@@ -1,0 +1,89 @@
+* {
+     box-sizing: border-box;
+}
+
+body {
+     background-image: url("../images/back-train.jpeg");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover; /*resize image to cover entire conainer*/
+}
+
+/* WRITING OVER BOOTSTRAP WITH MY-ID's */
+/* =================================== */
+#myContainer {
+     padding: 10px 10px 15px 10px;
+}
+
+/* =================================== */
+/* ------------- HEADER -------------- */
+/* =================================== */
+
+/* title text */
+h1 {
+     font-family: "Black Ops One", cursive;
+     text-align: center;
+}
+
+#myJumbotron {
+     padding: 2rem;
+     border-radius: 20px;
+     border: 2px double #eff;
+     background-color: #046;
+     color: #eff;
+}
+
+#myJumboCaption {
+     font-family: "Electrolize", sans-serif;
+     opacity: 0.75;
+}
+
+/* =================================== */
+/* -------------- TABLE -------------- */
+/* =================================== */
+
+#myTable {
+     border: solid 2px lightgrey;
+     background-color: #6ac;
+     font-family: "Overpass Mono", monospace;
+}
+
+/* t-body */
+#logged-trains {
+     background-color: yellow;
+     color: black;
+     font-family: 'Rubik Mono One', sans-serif;
+}
+
+/* =================================== */
+/* -------------- FORM --------------- */
+/* =================================== */
+#myForm {
+     border: solid 3px lightgrey;
+     background-color: #6ac;
+     color: #046;
+     border-radius: 15px;
+     padding: 12px; /*matches <thead> bootstrap*/
+     font-family: "Coda Caption", sans-serif;
+}
+
+#train-name-input,
+#destination-input,
+#frequency-input,
+#first-train-input {
+     font-family: "Average Sans", sans-serif;
+     border: solid 2px;
+}
+
+#train-name-input:focus,
+#destination-input:focus,
+#frequency-input:focus,
+#first-train-input:focus {
+     background-color: #fe1;
+}
+
+/* font-family: 'Electrolize', sans-serif; */
+
+/* font-family: "Rubik Mono One", sans-seri?f; */
+
+
